@@ -1,0 +1,140 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>EVOTING - Bulletin Board</title>
+
+  <!-- Custom fonts for this template-->
+  <!-- <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css"> -->
+  <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="{% static 'css/sb-admin-2.min.css' %}" rel="stylesheet">
+  <link href="{% static 'css/custom-style.css' %}" rel="stylesheet">
+
+</head>
+
+<body class="" >
+
+  <div class="m-0">
+
+    <!-- Outer Row -->
+  
+         <div class="row m-0">
+            <div class="hidden col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <div class="txt-vertical-align-middle text-center bg-custom-gradient-primary bg-custom-cover" style="background-image: url(/static/img/login-bg/bg-pattern.png);">
+                      <div class="align-m p-4 m-auto">
+                        <a>
+                            <img width="70%" src="{% static 'img/logo/white-login-logo.png' %}">
+                        </a>
+                        <p class="small pt-4 mb-4 text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when </p>
+                        
+                        <div class="date-box m-auto">
+                            <p class="small mb-0 p-2 text-white"><b>Results Release Date</b><br>26th September 2020 11:00 PM</p>
+                        </div>  
+                        <div class="mt-5 "><a href="administrator/login/" class="btn btn-primary btn-user mt-4"><i class="fas"></i> Admin Login</a></div>
+                        <div><a href="tallyingauthority/login/" class="btn btn-primary btn-user mt-4"><i class="fas"></i> Tallying Authority Login</a> </div>
+                        <div><a href="voter/login/" class="btn btn-primary btn-user mt-4"><i class="fas"></i> Voter Login</a> </div>
+
+
+                      </div>
+                  </div>
+            </div> 
+            <div class="col-xl-9 col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                <div class="row text-center mb-5">
+                    <div class="col-md-12">
+                      <div class="m-auto">
+                         <h2 class="font-weight-bold font-color-black pt-5 pb-5">Bulletin Board</h2> 
+                         <p class="small font-weight-bold font-color-black text-lg pt-4 mt-4">Elections</p>
+                      
+                         {% if winner != "" %}
+                            <p class="small font-weight-bold font-color-black text-lg">WINNER IS {{ winner }}</p>
+                         {% endif %}
+
+                         <table class="header-color m-auto">
+                              <thead>
+                                  <tr>
+                                    <th>Candidate Name</th>
+                                    <th>YES Count</th>
+                                    <th>NO Count</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+
+                                {% for c in candidates %}
+                                <tr>
+                                    <td>{{ c.name }}</td>
+                                    {% if c.yes_count is None or c.yes_count == "" %}
+                                        <td> N/A </td>
+                                        <td> N/A </td>
+                                    {% else %}
+                                        <td> {{ c.yes_count }} </td>
+                                        <td> {{ c.no_count }} </td>
+                                    {% endif %}
+                                </tr>
+                                {% endfor %}
+
+                              </tbody>
+                         </table>
+                      </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 col-xs-12 mb-4">
+                        <div class="date-box-01 m-auto text-center p-3">
+                            <p class="mb-0 pb-2 text-white"><b>Tallying Authority Registration Date</b></p>
+                            <p class="small mb-0 text-white"><b>Start Date :</b> 26th September 2020 9:00 AM</p>
+                            <p class="small mb-0 text-white"><b>End Date :</b> 26th September 2020 11:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 col-xs-12 mb-4">
+                        <div class="date-box-02 m-auto text-center p-3">
+                            <p class="mb-0 pb-2 text-white"><b>Voter Registration Date</b></p>
+                            <p class="small mb-0 text-white"><b>Start Date :</b> 26th September 2020 9:00 AM</p>
+                            <p class="small mb-0 text-white"><b>End Date :</b> 26th September 2020 11:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 col-xs-12 mb-4">
+                        <div class="date-box-03 m-auto text-center p-3">
+                            <p class="mb-0 pb-2 text-white"><b>Election Date</b></p>
+                            <p class="small mb-0 text-white"><b>Start Date :</b> 26th September 2020 9:00 AM</p>
+                            <p class="small mb-0 text-white"><b>End Date :</b> 26th September 2020 11:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-8 text-center">
+                        <p class="font-weight-bold font-color-black mb-0"><b>Number of Eligible Voters :</b> {{ voter_count }}</p>
+                    </div>
+                </div>
+           </div>
+         </div>
+            
+      
+
+
+  </div>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="{% static 'js/sb-admin-2.min.js' %}"></script>
+
+</body>
+
+</html>

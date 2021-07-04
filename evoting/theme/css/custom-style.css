@@ -1,0 +1,77 @@
+/*----login css start------*/
+
+.bg-custom-gradient-primary {
+    background-color: #001641;
+    background-image: linear-gradient(180deg,#022871 10%,#001641 100%);
+    background-size: cover;
+}
+.custom-container-login{
+    padding: 6% 2rem 1rem 2rem;
+    margin: 0 auto 2rem auto;
+    overflow: hidden;
+}
+.verifi-input-field{
+    margin: 0px 8px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 30px !important;
+    border: solid 1px #ccc;
+    box-shadow: 0 0 5px #ccc inset;
+    outline: none;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    height: calc(1.4em + 1.3rem + 0px) !important;
+    border-radius: 46px !important;
+}
+
+/*----login css end------*/
+
+/*----dashboard css start------*/
+.profile-header-img {
+      margin: 0 auto;
+}
+
+.profile-header-img > img.img-circle {
+    width: 135px;
+    height: 135px;
+    border: 2px solid #4e73df;
+    border-radius: 50%;
+}
+
+.profile-header {
+    margin-top: 43px;
+}
+
+.rank-label-container {
+    margin-top: -19px;
+    /* z-index: 1000; */
+    text-align: center;
+}
+
+.label.label-default.rank-label {
+    background-color: #0abb87;
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 10px 5px 10px;
+    border-radius: 27px;
+    font-size: 14px;
+}
+.label.label-default.rank-label:hover {
+    background-color: #078b64;
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 10px 5px 10px;
+    border-radius: 27px;
+    font-size: 14px;
+}
+.rank-label-container a:hover  {
+    text-decoration: none !important;
+}
+
+.sidebar .nav-item .nav-link .img-profile, .topbar .nav-item .nav-link .img-profile {
+    height: 3rem !important;
+    width: 3rem !important;
+}
+/*----dashboard css end------*/

@@ -1,0 +1,186 @@
+/*-----------bulletin board page css start-------------------*/
+
+.txt-vertical-align-middle{
+    display: table;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    left: 0;
+    padding-bottom: 30px;
+    padding-top: 30px; 
+}
+.bg-custom-cover{
+    background-size: 200%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+.align-m{
+    display: table-cell;
+    vertical-align: middle;
+}
+.font-size-n-14{
+    font-size: 14px;
+}
+.board-footer-bottom{
+    text-align: center;
+    position: relative;
+    z-index: 0;
+    display: table;
+    margin: auto;
+    height: 23vh;
+}
+.date-box{
+    padding: 5px;
+    background: #ffffff1f;
+    border-radius: 5px;
+    width: 80%
+}
+.date-box-01 {
+    padding: 5px;
+    background: #071c46;
+    border-radius: 5px;
+}
+.date-box-02 {
+    padding: 5px;
+    background: #0f234c;
+    border-radius: 5px;
+}
+.date-box-03 {
+    padding: 5px;
+    background: #182b52;
+    border-radius: 5px;
+}
+.font-color-primary{
+    color: #001641;
+}
+.font-color-black{
+    color: #000;
+}
+@media (max-width: 767px){
+.hidden{
+    display: none;
+}
+}
+
+/*-----------bulletin board page css end-------------------*/
+
+/*----login css start------*/
+
+.bg-custom-gradient-primary {
+    background-color: #001641;
+    background-image: linear-gradient(180deg,#022871 10%,#001641 100%);
+    background-size: cover;
+}
+.custom-container-login{
+    padding: 6% 2rem 1rem 2rem;
+    margin: 0 auto 2rem auto;
+    overflow: hidden;
+}
+.verifi-input-field{
+    margin: 0px 8px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 30px !important;
+    border: solid 1px #ccc;
+    box-shadow: 0 0 5px #ccc inset;
+    outline: none;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    height: calc(1.4em + 1.3rem + 0px) !important;
+    border-radius: 46px !important;
+}
+
+/*----login css end------*/
+
+/*----dashboard css start------*/
+
+#outer
+{
+    width:100%;
+    text-align: center;
+}
+.inner
+{
+    display: inline-block;
+}
+
+.profile-header-img {
+      margin: 0 auto;
+}
+
+.profile-header-img > img.img-circle {
+    width: 135px;
+    height: 135px;
+    border: 2px solid #4e73df;
+    border-radius: 50%;
+}
+
+.profile-header {
+    margin-top: 43px;
+}
+
+.rank-label-container {
+    margin-top: -19px;
+    /* z-index: 1000; */
+    text-align: center;
+}
+
+.label.label-default.rank-label {
+    background-color: #0abb87;
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 10px 5px 10px;
+    border-radius: 27px;
+    font-size: 14px;
+}
+.label.label-default.rank-label:hover {
+    background-color: #078b64;
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 10px 5px 10px;
+    border-radius: 27px;
+    font-size: 14px;
+}
+.rank-label-container a:hover  {
+    text-decoration: none !important;
+}
+
+.sidebar .nav-item .nav-link .img-profile, .topbar .nav-item .nav-link .img-profile {
+    height: 3rem !important;
+    width: 3rem !important;
+}
+/*----dashboard css end------*/
+
+/*----table css start------*/
+
+table {
+/*  font-family: arial, sans-serif;*/
+  border-collapse: collapse;
+  width: 70%;
+}
+.header-color th{
+    background-color: #001641;
+    color: #ffffff;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 10px;
+  text-align: center;
+  
+}
+
+tr:nth-child(even) {
+/*  background-color: #dddddd;*/
+}
+
+.edit-color{
+    color: #21af86;
+}
+.delete-color{
+    color: #e11f26;
+}
+/*----table css end------*/

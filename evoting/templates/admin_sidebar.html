@@ -1,0 +1,91 @@
+{% load static %}
+
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-custom-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+      <!-- Sidebar - Brand -->
+      <a class="d-flex align-items-center justify-content-center text-left p-3" href="/{{parent_path}}home/">
+        <div class="sidebar-brand-icon">
+         <img width="100%" src="{% static 'img/logo/sidebar-white-logo.png' %}">
+        </div>
+<!--        <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>-->
+      </a>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0">
+
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item active">
+        <a class="nav-link" href="/{{parent_path}}home/">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Dashboard</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <!-- Heading -->
+      <div class="sidebar-heading">
+        Election Information
+      </div>
+
+      <!-- Nav Item - Charts -->
+      <li class="nav-item">
+        <a class="nav-link" href="/">
+          <i class="fas fa-fw fa-bullhorn"></i>
+          <span>Bulletin Board</span></a>
+      </li>
+
+      <!-- Nav Item - Charts -->
+      <li class="nav-item">
+        <a class="nav-link" href="/{{parent_path}}candidates/">
+          <i class="fas fa-fw fa-user-tie"></i>
+          <span>View Candidates</span></a>
+      </li>
+
+      <!-- Nav Item - Charts -->
+      <li class="nav-item">
+        <a class="nav-link" href="/{{parent_path}}tallyingauthorities/">
+          <i class="fas fa-fw fa-user-shield"></i>
+          <span>View Tallying Authority</span></a>
+      </li>
+
+      <!-- Nav Item - Charts -->
+      <li class="nav-item">
+        <a class="nav-link" href="/{{parent_path}}voters/">
+          <i class="fas fa-fw fa-users"></i>
+          <span>View Voters</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <!-- Heading -->
+      <div class="sidebar-heading">
+        Help & Policies
+      </div>
+
+      <!-- Nav Item - Charts -->
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i class="fas fa-fw fa-file-alt"></i>
+          <span>Privacy Policy</span></a>
+      </li>
+
+      <!-- Nav Item - Tables -->
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          <i class="fas fa-fw fa-file-signature"></i>
+          <span>Terms & Conditions</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider d-none d-md-block">
+
+      <!-- Sidebar Toggler (Sidebar) -->
+      <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+      </div>
+
+    </ul>
+    <!-- End of Sidebar -->
